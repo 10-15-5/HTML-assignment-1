@@ -24,12 +24,12 @@
   color: black;
 }
 
+body {
+    margin: 0;
+}
+
 @media only screen and (max-width: 500px) {
-	/* Changes the size of the navbar for smaller screens */
-	.navbar a {
-		font-size: 15px;
-		padding: 10px 10px;
-	}
+
 }
 
 /*
@@ -45,11 +45,22 @@ index.html
 	border-radius: 12px;
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-top: 2%;
 }
 
 /* Setting a gradient background */
 .ind-html {
   background-image: linear-gradient(to right, #6ac6f1, #ffffff);
+}
+
+/* Adding a border around the bitcoin info section */
+.ind-info {
+	border-top: 100px;
+	border: solid;
+	text-align: center;
+	border-color: white;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 /* Styling the index header and adding a border */
@@ -250,6 +261,12 @@ Media Queries for all pages
 /* Editing CSS for small phones */
 @media only screen and (max-width: 340px) {
 
+    /* Changes the size of the navbar for smaller screens */
+	.navbar a {
+		font-size: 15px;
+		padding: 10px 10px;
+	}
+
     /*
     ------------------------------------------------
     index.html
@@ -259,6 +276,10 @@ Media Queries for all pages
     /* Chnaging the Header font size for iPhone 5/SE */
 	.ind-header {
 		font-size: 80%;
+	}
+
+	.ind-info {
+	    font-size: 80%;
 	}
 
     /*
@@ -354,6 +375,12 @@ Media Queries for all pages
 
 /* Editing CSS for medium - large phones */
 @media only screen and (min-width: 340px) and (max-width: 550px) {
+
+    /* Changes the size of the navbar for smaller screens */
+	.navbar a {
+		font-size: 15px;
+		padding: 10px 10px;
+	}
 
     /*
     ------------------------------------------------
