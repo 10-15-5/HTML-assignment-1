@@ -24,12 +24,17 @@
   color: black;
 }
 
+/* Giving the body section on all pages 0 margin so that the navbar will go to the full width of the page */
 body {
     margin: 0;
 }
 
-@media only screen and (max-width: 500px) {
-
+/* Styling the figcaptions on all pages */
+figcaption {
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
 }
 
 /*
@@ -132,14 +137,6 @@ bitcoin.html
   background-color: #fff;
 }
 
-/* Styling the figcaptions for the table and the video */
-figcaption {
-  color: white;
-  font-style: italic;
-  padding: 2px;
-  text-align: center;
-}
-
 /* Creating a div container for the iframe video */
 #bit-video {
 	position: relative;
@@ -162,11 +159,12 @@ ethereum.html
 -------------------------------------------------------------------------------
 */
 
+/* Setting the background colour for this page */
 .eth-html {
   background: lightgrey;
 }
 
-
+/* Styling the Ethereum banner, centre aligning it and fixing height and width settings */
 #eth-banner {
 	padding-top: 3%;
 	display: block;
@@ -176,6 +174,7 @@ ethereum.html
 	height: 230px;
 }
 
+/* Adding a rounded border around the info section */
 .eth-info {
 	border-top: 100px;
 	border: 8px double white;
@@ -183,6 +182,7 @@ ethereum.html
 	text-align: center;
 }
 
+/* Centre aligning the logo and adding a transition effect */
 #eth-logo {
 	display: block;
 	margin-left: auto;
@@ -192,6 +192,7 @@ ethereum.html
 	transition: width 2s, height 2s, transform 2s;
 }
 
+/* Detailing what will happen when the user hovers over the logo */
 #eth-logo:hover {
 	width: 20%;
 	height: 450px;
@@ -204,11 +205,23 @@ litecoin.html
 -------------------------------------------------------------------------------
 */
 
-.ltc-html .ltc-body {
-    min-height: 100%;
-    margin: 0;
-}
+/*
+    Trying to get the Litecoin background to go the full length of the page, been trying for about 3 days now to
+    no avail so Tracey, if you are seeing this, it's because I couldn't figure it out and I just gave up in
+    frustration.
+    Setting the HTML and body tags to min-height: 100% did not work for some reason, when I did that then all the
+    logos in the background would dissapear and I was left with a white screen.
+    Height is set to 920px as this is the closest I could get it to the bottom of my screen without introducing a
+    scroll bar for it.
 
+    All the div sections have a position:fixed atribute because I had to put them on top of the litecoin backgorund
+    photo, I did not put the background in a html tag as I wanted to adjust the opacity of the image and if it was
+    in html tag then the whole page became transparent, so I put it in it's own div section nd then displayed things on
+    top of it. I suspect this is a major reason as why I couldn't get the backgorund to go down the full lenght of the
+    screen.
+*/
+
+/* Styling the Litecoin backgorund for the page */
 .ltc-background {
 	background-image: url("images/litecoin-logo.png");
 	height: 920px;
@@ -216,11 +229,13 @@ litecoin.html
 	opacity: 0.1;
 }
 
+/* The div section that has the banner inside of it */
 .ltc-header {
 	position: fixed;
 	top: 10%;
 }
 
+/* Styleing the banner, centre aligning it and fixing height and width */
 #ltc-banner {
 	display: block;
 	margin-left: auto;
@@ -229,6 +244,7 @@ litecoin.html
 	height: 200px;
 }
 
+/* Styling the Litecoin info section */
 .ltc-info {
 	position: fixed;
 	top: 35%;
@@ -238,12 +254,14 @@ litecoin.html
 	text-align: center;
 }
 
+/* This is the div that holds the Litecoin video*/
 #ltc-video {
     position: fixed;
 	top: 50%;
 	width: 100%;
 }
 
+/* Trying to centre align the Litecoin video */
 .ltc-responsive-iframe {
     display: block;
 	margin-left: auto;
@@ -258,7 +276,7 @@ Media Queries for all pages
 -------------------------------------------------------------------------------
 */
 
-/* Editing CSS for small phones */
+/* Editing CSS for small phone screens */
 @media only screen and (max-width: 340px) {
 
     /* Changes the size of the navbar for smaller screens */
@@ -273,11 +291,12 @@ Media Queries for all pages
     ------------------------------------------------
     */
 
-    /* Chnaging the Header font size for iPhone 5/SE */
+    /* Chnaging the Header font size */
 	.ind-header {
 		font-size: 80%;
 	}
 
+    /* Chnaging the info font size */
 	.ind-info {
 	    font-size: 80%;
 	}
@@ -334,11 +353,13 @@ Media Queries for all pages
 	    font-size: 80%;
 	}
 
+    /* Fixing the logo so it fits a bit better on the screen */
 	#eth-logo {
 		height: 200px;
 		width: 50%;
 	}
 
+    /* Changing the way the transition works so that it looks a bit better on mobile screens */
 	#eth-logo:hover {
         width: 20%;
         height: 100px;
@@ -351,17 +372,20 @@ Media Queries for all pages
     ------------------------------------------------
     */
 
+    /* Changing the Litecoin banner for smaller screens */
     #ltc-banner {
         width: 80%;
         height: 60px;
     }
 
+    /* Changing font size and the size of the border */
     .ltc-info {
         top: 25%;
         border: 3px dashed blue;
         font-size: 70%;
     }
 
+    /* adding some padding to the top of the video */
     #ltc-video {
         padding-top: 20%;
     }
@@ -429,11 +453,13 @@ Media Queries for all pages
 	    font-size: 80%;
 	}
 
+    /* Changing the size of the logo so that it fits better */
 	#eth-logo {
 		height: 200px;
 		width: 50%;
 	}
 
+    /* Again, changing the transition effect so it look better on mobile */
 	#eth-logo:hover {
         width: 20%;
         height: 100px;
@@ -446,17 +472,20 @@ Media Queries for all pages
     ------------------------------------------------
     */
 
+    /* Changing the size of the Litecoin banner */
     #ltc-banner {
         width: 80%;
         height: 60px;
     }
 
+    /* Changing fornt size and the border size for mobile */
     .ltc-info {
         top: 25%;
         border: 3px dashed blue;
         font-size: 70%;
     }
 
+    /* Adding some padding to the top of the video div */
     #ltc-video {
         padding-top: 10%;
     }
@@ -502,6 +531,9 @@ Media Queries for all pages
 		padding-top: 5%;
 	}
 
+    /* Changing the ethereum logo for tablet screens
+        The transition doesn;t look too bad on tablet screen so I left it as it was
+    */
 	#eth-logo {
 		height: 400px;
 		width: 60%;
@@ -513,11 +545,13 @@ Media Queries for all pages
     ------------------------------------------------
     */
 
+    /* Changing the size of the litecoin banner */
     #ltc-banner {
         width: 65%;
         height: 100px;
     }
 
+    /* changing the border type on the info section */
     .ltc-info {
         top: 25%;
         border: 3px dashed blue;

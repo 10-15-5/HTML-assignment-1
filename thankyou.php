@@ -8,12 +8,14 @@
 </head>
 <body>
 	<div class="navbar">
+	    // Navigation bar to go to each page
 		<a href="index.html">Home</a>
 		<a href="#bitcoin">Bitcoin</a>
 		<a href="#ethereum">Ethereum</a>
 		<a href="#litecoin">Litecoin</a>
 	</div>
 	<div class="container">
+	    // Section thanking the user and printing their inputted data
 		<h1>Thank you! We have all of your details saved now!</h1>
 		<p>Welcome <?php echo $_POST["name"]; ?></p>
 		<p>We have sent an email to: <?php echo $_POST["email"]; ?> for confirmation!</p>
