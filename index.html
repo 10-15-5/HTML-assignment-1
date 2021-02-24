@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="ind-html">
+<head>
+	<!--	c00264985	Joe Holden	-->
+	<title>Home</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="bitcoin.html">Bitcoin</a>
+		<a href="ethereum.html">Ethereum</a>
+		<a href="litecoin.html">Litecoin</a>
+	</div>
+	<div class="ind-header">
+		<h1>Welcome to my website all about Cryptocurrency!</h1>
+	</div><br><br>
+	<div id="questions">
+		<p>I'm collecting data on users and have a few questions for you</p>
+		<em>This will be very quick</em>
+		<form action="thankyou.php" method="post">
+			<br><label for="name">Name:</label>
+			<input type="text" id="name" name="name" value=""><br>
+			
+			<br><label for="email">Email:</label>
+			<input type="email" id="email" name="email" value=""><br><br>
+			
+			<label for="favcolor">Please enter you favourite colour:</label>
+			<input type="color" id="favcolor" name="favcolor"><br><br>
+
+			<label for="crypto">Crypto of choice:</label>
+			<select id="crypto" name="crypto">
+				<option value="bitcoin">Bitcoin</option>
+				<option value="litecoin">Litecoin</option>
+				<option value="ethereum">Ethereum</option>
+				<option value="other">Other</option>
+			</select>
+
+			  <p>How often do you trade crypto?</p>
+			  <input type="radio" id="time" name="time" value="daily">
+			  <label for="daily">Daily</label><br>
+			  <input type="radio" id="time" name="time" value="weekly">
+			  <label for="weekly">Weekly</label><br>
+			  <input type="radio" id="time" name="time" value="monthly">
+			  <label for="monthly">Monthly</label>
+
+			<p>Select a date you last traded crypto:</p>
+			<label for="myDate"></label>
+			<input type="date" name="myDate" id="myDate"><br><br>
+
+			<input type="submit" onclick="alert('Thank you! We have your details now :)')" value="Submit">
+			<input type="reset"><br><br>
+		</form>
+	</div>
+</body>
+</html>

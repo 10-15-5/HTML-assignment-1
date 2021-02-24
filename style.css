@@ -1,0 +1,264 @@
+/*	c00264985	Joe Holden	*/
+
+/* Styling the Navbar for all pages */
+.navbar {
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	width: 99%;
+}
+
+/* Styling the links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Inverts the colours when mouse hovers over links */
+.navbar a:hover {
+  background: #fff;
+  color: black;
+}
+
+@media only screen and (max-width: 500px) {
+	/* Changes the size of the navbar for smaller screens */
+	.navbar a {
+		font-size: 15px;
+		padding: 10px 10px;
+	}
+}
+
+/*
+-------------------------------------------------------------------------------
+index.html
+-------------------------------------------------------------------------------
+*/
+
+/* Styling the questions and adding a rounded border */
+#questions {
+	text-align: center;
+	border: 8px double red;
+	border-radius: 12px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/* Setting a gradient background */
+.ind-html {
+  background-image: linear-gradient(to right, #6ac6f1, #ffffff);
+}
+
+/* Styling the index header and adding a border */
+.ind-header {
+	border: 8px solid black;
+	border-radius: 12px;
+	text-align: center;
+	margin-top: 75px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+@media only screen and (max-width: 330px) {
+	/* Chnaging the Header font size for iPhone 5/SE */
+	.ind-header {
+		font-size: 80%;
+	}
+}
+
+/*
+-------------------------------------------------------------------------------
+bitcoin.html
+-------------------------------------------------------------------------------
+*/
+
+/* Tried to get as close to Bitcoin orange as I could */
+.bit-html {
+  background: #F2A900;
+}
+
+/* Adding the bitcoin banner and centre it */
+#bit-banner {
+	padding-top: 5%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Adding a border around the bitcoin info section */
+.bit-info {
+	border-top: 100px;
+	border: solid;
+	text-align: center;
+	border-color: white;
+}
+
+/* Styling the Bitcoin table about prices year-on-year */
+.bit-table {
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 8px solid;
+	border-spacing: 5px;
+}
+
+/* Styling the font size for the table headers and rows */
+.bit-table th, td {
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+/* Making the background colour of the headers be white */
+.bit-table th {
+	background-color: white;
+}
+
+/* Making the background colour of the even rows be lightgrey */
+.bit-table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/* Making the background colour of the odd rows be white */
+.bit-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Styling the figcaptions for the table and the video */
+figcaption {
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Centre aligning the video */
+#bit-video {
+	text-align: center;
+}
+
+@media only screen and (max-width: 540px) {
+	#bit-banner {
+		width: 60%;
+		padding-top: 15%;
+	}
+}
+
+/*
+-------------------------------------------------------------------------------
+ethereum.html
+-------------------------------------------------------------------------------
+*/
+
+.eth-html {
+  background: lightgrey;
+}
+
+
+#eth-banner {
+	padding-top: 3%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+	height: 230px;
+}
+
+.eth-info {
+	border-top: 100px;
+	border: 8px double white;
+	border-radius: 12px;
+	text-align: center;
+}
+
+#eth-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	height: 230px;
+	transition: width 2s, height 2s, transform 2s;
+}
+
+#eth-logo:hover {
+	width: 20%;
+	height: 450px;
+	transform: rotate(180deg);
+}
+
+/*
+-------------------------------------------------------------------------------
+litecoin.html
+-------------------------------------------------------------------------------
+*/
+
+.ltc-html {
+	background: white;
+}
+
+#ltc-background {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	opacity: 0.2;
+	width: 25%;
+}
+
+.ltc-background {
+	background-attachment: scroll;
+	background-image: url("images/litecoin-logo.png"); /* The image used */
+	height: 880px; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	background-repeat: repeat; /* Do not repeat the image */
+	background-size: 20% 30%;
+	opacity: 0.1;
+}
+
+.ltc-header {
+	position: fixed;
+	top: 10%;
+}
+
+#ltc-banner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35%;
+	height: 200px;
+}
+
+.ltc-info {
+	position: fixed;
+	top: 35%;
+	border-top: 100px;
+	border: 8px dashed blue;
+	border-radius: 12px;
+	text-align: center;
+}
+
+#ltc-video {
+	position: fixed;
+	top: 50%;
+	padding-left: 35%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
