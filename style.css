@@ -153,6 +153,12 @@ bitcoin.html
     height: 350px;
 }
 
+/* Styling the scroll button on the end of the page */
+#scroll-button {
+    width: 50px;
+    padding-left: 10px;
+}
+
 /*
 -------------------------------------------------------------------------------
 ethereum.html
