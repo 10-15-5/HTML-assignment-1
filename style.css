@@ -5,7 +5,7 @@
 	background-color: #000;
 	position: fixed;
 	top: 0;
-	width: 99%;
+	width: 100%;
 }
 
 /* Styling the links inside the navbar */
@@ -60,13 +60,6 @@ index.html
 	margin-top: 75px;
 	margin-left: 10%;
 	margin-right: 10%;
-}
-
-@media only screen and (max-width: 330px) {
-	/* Chnaging the Header font size for iPhone 5/SE */
-	.ind-header {
-		font-size: 80%;
-	}
 }
 
 /*
@@ -136,16 +129,20 @@ figcaption {
   text-align: center;
 }
 
-/* Centre aligning the video */
+/* Creating a div container for the iframe video */
 #bit-video {
-	text-align: center;
+	position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
-@media only screen and (max-width: 540px) {
-	#bit-banner {
-		width: 60%;
-		padding-top: 15%;
-	}
+/* Setting the size and spacing for the iframe */
+.btc-responsive-iframe {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+    height: 350px;
 }
 
 /*
@@ -196,25 +193,14 @@ litecoin.html
 -------------------------------------------------------------------------------
 */
 
-.ltc-html {
-	background: white;
-}
-
-#ltc-background {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10%;
-	opacity: 0.2;
-	width: 25%;
+.ltc-html .ltc-body {
+    min-height: 100%;
+    margin: 0;
 }
 
 .ltc-background {
-	background-attachment: scroll;
-	background-image: url("images/litecoin-logo.png"); /* The image used */
-	height: 880px; /* You must set a specified height */
-	background-position: center; /* Center the image */
-	background-repeat: repeat; /* Do not repeat the image */
+	background-image: url("images/litecoin-logo.png");
+	height: 920px;
 	background-size: 20% 30%;
 	opacity: 0.1;
 }
@@ -242,9 +228,279 @@ litecoin.html
 }
 
 #ltc-video {
-	position: fixed;
+    position: fixed;
 	top: 50%;
-	padding-left: 35%
+	width: 100%;
+}
+
+.ltc-responsive-iframe {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+    height: 350px;
+}
+
+/*
+-------------------------------------------------------------------------------
+Media Queries for all pages
+-------------------------------------------------------------------------------
+*/
+
+/* Editing CSS for small phones */
+@media only screen and (max-width: 340px) {
+
+    /*
+    ------------------------------------------------
+    index.html
+    ------------------------------------------------
+    */
+
+    /* Chnaging the Header font size for iPhone 5/SE */
+	.ind-header {
+		font-size: 80%;
+	}
+
+    /*
+    ------------------------------------------------
+    bitcoin.html
+    ------------------------------------------------
+    */
+
+    /* Changing the padding on the table to be able to fit smaller screens */
+    .bit-table th, td {
+        padding: 4px;
+    }
+
+    /* Fixing the banner in mobile view, making it smaller and adding extra padding */
+	#bit-banner {
+		width: 80%;
+		padding-top: 15%;
+	}
+
+	/* Making font a bit smaller so it takes up less space on the screen */
+	.bit-info {
+	    font-size: 80%;
+	}
+
+	/* Changing border sizing to fit mobile screen properly */
+	.bit-table {
+        border: 2px solid;
+	    border-spacing: 0;
+    }
+
+    /* Changing iframe size so it fits on mobile screen */
+    .btc-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
+
+    /*
+    ------------------------------------------------
+    ethereum.html
+    ------------------------------------------------
+    */
+
+    /* Fixing the banner in mobile view, making it wider and adding less padding */
+	#eth-banner {
+		height: 100px;
+		width: 100%;
+		padding-top: 10%;
+	}
+
+	/* Making font a bit smaller so it takes up less space on the screen */
+	.eth-info {
+	    font-size: 80%;
+	}
+
+	#eth-logo {
+		height: 200px;
+		width: 50%;
+	}
+
+	#eth-logo:hover {
+        width: 20%;
+        height: 100px;
+        transform: rotate(180deg);
+    }
+
+    /*
+    ------------------------------------------------
+    litecoin.html
+    ------------------------------------------------
+    */
+
+    #ltc-banner {
+        width: 80%;
+        height: 60px;
+    }
+
+    .ltc-info {
+        top: 25%;
+        border: 3px dashed blue;
+        font-size: 70%;
+    }
+
+    #ltc-video {
+        padding-top: 20%;
+    }
+
+    /* Changing iframe size so it fits on mobile screen */
+    .ltc-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
+}
+
+/* Editing CSS for medium - large phones */
+@media only screen and (min-width: 340px) and (max-width: 550px) {
+
+    /*
+    ------------------------------------------------
+    bitcoin.html
+    ------------------------------------------------
+    */
+
+    /* Fixing the banner in mobile view, making it smaller and adding extra padding */
+	#bit-banner {
+		width: 80%;
+		padding-top: 15%;
+	}
+
+    /* Making font a bit smaller so it takes up less space on the screen */
+	.bit-info {
+	    font-size: 80%;
+	}
+
+    /* Changing border sizing to fit mobile screen properly */
+	.bit-table {
+        border: 2px solid;
+	    border-spacing: 0;
+    }
+
+    /* Changing iframe size so it fits on mobile screen */
+    .btc-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
+
+    /*
+    ------------------------------------------------
+    ethereum.html
+    ------------------------------------------------
+    */
+
+    /* Fixing the banner in mobile view, making it wider and adding less padding */
+	#eth-banner {
+		height: 100px;
+		width: 75%;
+		padding-top: 10%;
+	}
+
+	/* Making font a bit smaller so it takes up less space on the screen */
+	.eth-info {
+	    font-size: 80%;
+	}
+
+	#eth-logo {
+		height: 200px;
+		width: 50%;
+	}
+
+	#eth-logo:hover {
+        width: 20%;
+        height: 100px;
+        transform: rotate(180deg);
+    }
+
+    /*
+    ------------------------------------------------
+    litecoin.html
+    ------------------------------------------------
+    */
+
+    #ltc-banner {
+        width: 80%;
+        height: 60px;
+    }
+
+    .ltc-info {
+        top: 25%;
+        border: 3px dashed blue;
+        font-size: 70%;
+    }
+
+    #ltc-video {
+        padding-top: 10%;
+    }
+
+    /* Changing iframe size so it fits on mobile screen */
+    .ltc-responsive-iframe {
+        width: 80%;
+        height: 250px;
+    }
+}
+
+/* Editing CSS for tablets */
+@media only screen and (min-width: 550px) and (max-width: 1024px) {
+
+    /*
+    ------------------------------------------------
+    bitcoin.html
+    ------------------------------------------------
+    */
+
+    /* Fixing the banner in mobile view, making it smaller and adding extra padding */
+	#bit-banner {
+		width: 80%;
+		padding-top: 10%;
+	}
+
+	/* Changing iframe size so it fits on mobile screen */
+    .btc-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
+
+    /*
+    ------------------------------------------------
+    ethereum.html
+    ------------------------------------------------
+    */
+
+    /* Fixing the banner in mobile view, making it wider and adding less padding */
+	#eth-banner {
+		height: 200px;
+		width: 75%;
+		padding-top: 5%;
+	}
+
+	#eth-logo {
+		height: 400px;
+		width: 60%;
+	}
+
+    /*
+    ------------------------------------------------
+    litecoin.html
+    ------------------------------------------------
+    */
+
+    #ltc-banner {
+        width: 65%;
+        height: 100px;
+    }
+
+    .ltc-info {
+        top: 25%;
+        border: 3px dashed blue;
+    }
+
+    /* Changing iframe size so it fits on mobile screen */
+    .ltc-responsive-iframe {
+        width: 80%;
+        height: 250px;
+    }
 }
 
 
