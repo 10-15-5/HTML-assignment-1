@@ -272,6 +272,41 @@ litecoin.html
 
 /*
 -------------------------------------------------------------------------------
+thankyou.php
+-------------------------------------------------------------------------------
+*/
+
+.php-html {
+  background-image: linear-gradient(to right, #6ac6f1, #ffffff);
+}
+
+.php-container {
+    text-align: center;
+	border: 8px double red;
+	border-radius: 12px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 75px;
+}
+
+/* Creating a div container for the iframe video */
+.php-panda {
+	text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Setting the size and spacing for the iframe */
+.php-responsive-iframe {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+    height: 400px;
+}
+
+/*
+-------------------------------------------------------------------------------
 Media Queries for all pages
 -------------------------------------------------------------------------------
 */
@@ -395,6 +430,18 @@ Media Queries for all pages
         width: 80%;
         height: 200px;
     }
+
+    /*
+    ------------------------------------------------
+    thankyou.php
+    ------------------------------------------------
+    */
+
+    /* Changing iframe size so it fits on mobile screen */
+    .php-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
 }
 
 /* Editing CSS for medium - large phones */
@@ -495,6 +542,18 @@ Media Queries for all pages
         width: 80%;
         height: 250px;
     }
+
+    /*
+    ------------------------------------------------
+    thankyou.php
+    ------------------------------------------------
+    */
+
+    /* Changing iframe size so it fits on mobile screen */
+    .php-responsive-iframe {
+        width: 80%;
+        height: 200px;
+    }
 }
 
 /* Editing CSS for tablets */
@@ -561,6 +620,18 @@ Media Queries for all pages
     .ltc-responsive-iframe {
         width: 80%;
         height: 250px;
+    }
+
+    /*
+    ------------------------------------------------
+    thankyou.php
+    ------------------------------------------------
+    */
+
+    /* Changing iframe size so it fits on mobile screen */
+    .php-responsive-iframe {
+        width: 80%;
+        height: 400px;
     }
 }
 
